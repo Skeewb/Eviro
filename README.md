@@ -2,13 +2,6 @@
 
 A modern desktop application for managing notes and tasks, built with Electron and React.
 
-## Features
-
-- 📝 **Notes**: Create and manage text notes with auto-save
-- ✓ **Tasks**: Track tasks with due dates and completion status
-- 💾 **Persistent Storage**: All data is saved locally on your machine
-- 🎨 **Modern UI**: Clean and intuitive interface
-- ⌨️ **Keyboard Shortcuts**: Ctrl+S to save (Cmd+S on Mac)
 
 ## Installation & Setup
 
