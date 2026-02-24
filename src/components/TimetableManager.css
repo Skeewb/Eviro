@@ -1,0 +1,220 @@
+.timetable-manager.dragdrop {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.timetable-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  background: #fff;
+}
+
+.timetable-header h2 {
+  font-size: 24px;
+  color: #172742;
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+.timetable-header p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.secondary-btn,
+.timetable-header .save-btn {
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-weight: 800;
+}
+
+.secondary-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #26354f;
+}
+
+.secondary-btn:hover {
+  border-color: var(--line-strong);
+}
+
+.timetable-header .save-btn {
+  border: none;
+  background: linear-gradient(140deg, var(--brand) 0%, var(--brand-strong) 100%);
+  color: #fff;
+}
+
+.timetable-header .save-btn:disabled {
+  background: #9c988f;
+}
+
+.drag-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 12px;
+}
+
+.subject-pool {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 12px;
+  height: fit-content;
+}
+
+.subject-pool h3 {
+  color: #1f2f4a;
+  margin-bottom: 8px;
+}
+
+.empty-pool {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.subject-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subject-chip-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subject-chip {
+  flex: 1;
+  border: 1px solid rgba(25, 41, 52, 0.24);
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-weight: 800;
+  font-size: 12px;
+  color: #1d2c37;
+  cursor: grab;
+}
+
+.subject-chip:active {
+  cursor: grabbing;
+}
+
+.subject-color-picker {
+  width: 34px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 2px;
+}
+
+.week-grid-wrap {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 10px;
+}
+
+.week-grid-scroll {
+  overflow: auto;
+}
+
+.week-grid {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  min-width: 860px;
+}
+
+.week-grid th,
+.week-grid td {
+  border: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.week-grid th {
+  background: #f2f7ff;
+  color: #274063;
+  font-size: 13px;
+  padding: 8px;
+  text-align: center;
+}
+
+.period-cell {
+  background: #f7faff;
+  width: 82px;
+  padding: 6px;
+  text-align: center;
+}
+
+.period-cell strong {
+  display: block;
+  font-size: 16px;
+  color: #1f2f4a;
+}
+
+.period-cell span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.class-cell {
+  height: 58px;
+  padding: 4px;
+  background: #fbfdff;
+}
+
+.class-cell.drag-target {
+  background: #eaf1ff;
+}
+
+.class-pill {
+  border-radius: 8px;
+  padding: 6px 8px;
+  min-height: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6px;
+  cursor: grab;
+}
+
+.class-pill:active {
+  cursor: grabbing;
+}
+
+.class-pill span {
+  font-size: 12px;
+  font-weight: 800;
+  color: #102734;
+  line-height: 1.2;
+}
+
+.cell-clear {
+  border: none;
+  background: rgba(255, 255, 255, 0.76);
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #223a49;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1180px) {
+  .drag-layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,152 @@
+.subject-page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.subject-page-header {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.subject-page-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subject-page-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.subject-page-title-wrap h2 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.subject-page-title-wrap p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.subject-page-average {
+  text-align: right;
+}
+
+.subject-page-average span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.subject-page-average strong {
+  font-size: 28px;
+  color: var(--brand-strong);
+  line-height: 1;
+}
+
+.subject-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.subject-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  padding: 14px;
+}
+
+.subject-card-wide {
+  grid-column: span 2;
+}
+
+.subject-card h3 {
+  margin-bottom: 10px;
+}
+
+.subject-empty {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.subject-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subject-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f7faff;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.subject-item.static {
+  cursor: default;
+}
+
+.subject-item span {
+  display: block;
+  font-weight: 700;
+  color: #1f2f4a;
+}
+
+.subject-item em {
+  font-style: normal;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+  font-size: 12px;
+  color: #4f6385;
+  font-weight: 700;
+}
+
+.forecast-row input {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: #244165;
+  padding: 5px 8px;
+  width: 88px;
+}
+
+.subject-page-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--muted);
+}
+
+@media (max-width: 960px) {
+  .subject-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subject-card-wide {
+    grid-column: span 1;
+  }
+}

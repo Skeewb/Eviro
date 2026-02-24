@@ -1,0 +1,256 @@
+.tasks-calendar {
+  display: flex;
+  height: 100%;
+  gap: 16px;
+}
+
+.calendar-container {
+  flex: 0 0 360px;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  padding: 14px;
+  overflow-y: auto;
+}
+
+.react-calendar {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+}
+
+.react-calendar__navigation button {
+  border-radius: 8px;
+  color: #233552;
+}
+
+.react-calendar__tile {
+  padding: 8px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.react-calendar__tile.has-tasks {
+  background-color: #eaf1ff;
+  font-weight: 800;
+}
+
+.react-calendar__tile.has-tasks:hover {
+  background-color: #dce8ff;
+}
+
+.react-calendar__tile--active {
+  background-color: var(--brand) !important;
+  color: #fff;
+}
+
+.task-indicator {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+}
+
+.task-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: var(--brand);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.calendar-tasks {
+  flex: 1;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.calendar-tasks-header {
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.calendar-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.calendar-tasks-header h2 {
+  margin: 0;
+  font-size: 19px;
+  color: #172742;
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+.calendar-view-toggle {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f5f9ff;
+  padding: 4px;
+  gap: 4px;
+}
+
+.calendar-view-toggle button {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #355279;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.calendar-view-toggle button.active {
+  border-color: #bfd2f0;
+  background: #ffffff;
+  color: #1f3a5e;
+  box-shadow: 0 6px 12px rgba(24, 51, 94, 0.08);
+}
+
+.no-tasks {
+  text-align: center;
+  color: var(--muted);
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 11px;
+  background: #f7faff;
+  border-radius: 11px;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  transition: all 0.18s;
+}
+
+.task-item:hover {
+  border-color: var(--line-strong);
+}
+
+.task-item.completed {
+  opacity: 0.68;
+}
+
+.task-item .task-checkbox {
+  margin-top: 3px;
+  flex-shrink: 0;
+  accent-color: var(--brand);
+}
+
+.task-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-title {
+  font-weight: 700;
+  color: #1f2f4a;
+  word-break: break-word;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recurring-badge {
+  font-size: 11px;
+  border-radius: 999px;
+  background: #e9f1ff;
+  color: #2f4f8e;
+  padding: 2px 6px;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: #7f90aa;
+}
+
+.task-description {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+  word-break: break-word;
+}
+
+.calendar-subject-chip {
+  margin-top: 4px;
+  border: 1px solid #d2e0f6;
+  background: #eff5ff;
+  color: #35527e;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.calendar-subject-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.task-time-info {
+  margin-top: 4px;
+  display: flex;
+  gap: 6px;
+}
+
+.task-time-badge {
+  display: inline-block;
+  background: #e8f3ff;
+  color: #2f5a9e;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid #d2e0f6;
+}
+
+.task-time-badge.all-day {
+  background: #fff0e6;
+  color: #c86a00;
+  border-color: #ffd9b3;
+}
+
+@media (max-width: 1200px) {
+  .tasks-calendar {
+    flex-direction: column;
+  }
+
+  .calendar-container {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+
+  .calendar-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

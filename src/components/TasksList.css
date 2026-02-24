@@ -1,0 +1,235 @@
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.tasks-list .new-btn {
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, #ffffff 0%, #eef4ff 100%);
+  color: #26354f;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.tasks-list .new-btn:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+}
+
+.tasks-list .task-stats {
+  padding: 9px 11px;
+  font-size: 12px;
+  color: var(--muted);
+  background: #eef4ff;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font-weight: 700;
+}
+
+.tasks-list .items {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tasks-list .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  transition: all 0.2s ease;
+}
+
+.tasks-list .item:hover {
+  border-color: var(--line-strong);
+  box-shadow: 0 8px 18px rgba(36, 29, 20, 0.08);
+}
+
+.tasks-list .item.active {
+  border-color: #7e9cd7;
+  background: #eef4ff;
+}
+
+.tasks-list .item-symbol {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.tasks-list .task-checkbox {
+  cursor: pointer;
+  width: 17px;
+  height: 17px;
+  accent-color: var(--brand);
+}
+
+.tasks-list .item-content {
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.tasks-list .item-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: #1f2f4a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tasks-list .item-title.completed {
+  text-decoration: line-through;
+  color: #9d9080;
+}
+
+.tasks-list .item-due {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.tasks-list .delete-btn {
+  background: #fff7f4;
+  border: 1px solid #e4c7be;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+
+.tasks-list .delete-btn:hover {
+  background: #ffefe9;
+}
+
+.tasks-list .list-empty {
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  color: var(--muted);
+  font-size: 13px;
+  background: #f7faff;
+}
+
+.tasks-list .item-subject {
+  border: 1px solid #d2e0f6;
+  background: #eff5ff;
+  color: #35527e;
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.tasks-list .item-subject-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.tasks-list .folders-panel {
+  border: 1px solid var(--line);
+  background: #f9fbff;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.tasks-list .folders-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.tasks-list .folders-head button,
+.tasks-list .folder-row-actions button {
+  border: 1px solid #cad6ee;
+  background: #ffffff;
+  color: #2f4770;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.tasks-list .folder-node {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 6px;
+}
+
+.tasks-list .folder-row {
+  border: 1px solid transparent;
+  background: transparent;
+  color: #31486f;
+  text-align: left;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tasks-list .folder-row:hover {
+  background: #ecf3ff;
+}
+
+.tasks-list .folder-row.active {
+  background: #e4eeff;
+  border-color: #b7caec;
+  font-weight: 700;
+}
+
+.tasks-list .folder-row.all {
+  width: 100%;
+}
+
+.tasks-list .folder-row-actions {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.tasks-list .folders-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 170px;
+  overflow: auto;
+}
+
+.tasks-list .folder-rename-input {
+  border: 1px solid #b7caec;
+  background: #fff;
+  color: #2f4770;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 12px;
+  width: 100%;
+}
+

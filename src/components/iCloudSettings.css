@@ -1,0 +1,166 @@
+.icloud-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 34, 66, 0.36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+}
+
+.icloud-modal {
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 46px rgba(22, 39, 74, 0.26);
+  width: min(480px, 100%);
+  padding: 0;
+}
+
+.icloud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.icloud-header h2 {
+  margin: 0;
+  font-size: 19px;
+  color: #172742;
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+.close-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  color: #2d4368;
+  width: 29px;
+  height: 29px;
+  border-radius: 8px;
+}
+
+.close-btn:hover {
+  background: #eef4ff;
+}
+
+.icloud-form,
+.icloud-connected {
+  padding: 18px;
+}
+
+.icloud-connected {
+  text-align: center;
+}
+
+.status-badge {
+  display: inline-block;
+  background: #eaf7ef;
+  color: var(--success);
+  border: 1px solid #cce5d5;
+  padding: 7px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.icloud-connected p {
+  margin: 8px 0;
+  color: #4d617f;
+}
+
+.info-text {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.icloud-form .form-group {
+  margin-bottom: 12px;
+}
+
+.icloud-form .form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #223853;
+  font-size: 13px;
+}
+
+.icloud-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.icloud-form .form-group input:focus {
+  outline: none;
+  border-color: var(--line-strong);
+  box-shadow: 0 0 0 3px rgba(35, 88, 216, 0.12);
+}
+
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.message.success {
+  background: #eaf7ef;
+  color: var(--success);
+  border: 1px solid #cce5d5;
+}
+
+.message.error {
+  background: #ffefeb;
+  color: var(--danger);
+  border: 1px solid #f1cdc6;
+}
+
+.connect-btn,
+.disconnect-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.connect-btn {
+  border: none;
+  background: linear-gradient(140deg, var(--brand) 0%, var(--brand-strong) 100%);
+  color: #fff;
+}
+
+.connect-btn:hover:not(:disabled) {
+  filter: brightness(0.96);
+}
+
+.connect-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.disconnect-btn {
+  background: #fff7f4;
+  color: var(--danger);
+  border: 1px solid #e4c7be;
+  margin-top: 10px;
+}
+
+.disconnect-btn:hover {
+  background: #ffefe9;
+}

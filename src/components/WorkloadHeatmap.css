@@ -1,0 +1,67 @@
+.workload-heatmap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workload-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.workload-cell {
+  border-radius: 8px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #223959;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.workload-cell.light {
+  background: #daf0df;
+}
+
+.workload-cell.medium {
+  background: #ffe8ab;
+}
+
+.workload-cell.heavy {
+  background: #ffc2bd;
+}
+
+.workload-legend {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  color: #5e7394;
+}
+
+.workload-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.workload-legend .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.workload-legend .dot.light {
+  background: #daf0df;
+}
+
+.workload-legend .dot.medium {
+  background: #ffe8ab;
+}
+
+.workload-legend .dot.heavy {
+  background: #ffc2bd;
+}

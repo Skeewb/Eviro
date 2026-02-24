@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Notes & Tasks Manager - Desktop App"
+    />
+    <title>Notes & Tasks Manager</title>
+    <style>
+      #boot-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483647;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:
+          radial-gradient(circle at 14% 14%, rgba(35, 88, 216, 0.22), transparent 30%),
+          radial-gradient(circle at 86% 22%, rgba(35, 88, 216, 0.16), transparent 36%),
+          linear-gradient(160deg, #e7efff 0%, #dce8ff 100%);
+        opacity: 1;
+        transition: opacity 0.24s ease;
+      }
+
+      #boot-splash.boot-splash-hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .boot-splash-card {
+        min-width: 260px;
+        max-width: 86vw;
+        border-radius: 20px;
+        padding: 18px 22px;
+        border: 1px solid #c7d6f0;
+        background: linear-gradient(145deg, #ffffff 0%, #f2f7ff 100%);
+        box-shadow: 0 16px 30px rgba(25, 47, 89, 0.2);
+        text-align: center;
+        font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      }
+
+      .boot-splash-logo {
+        width: min(280px, 72vw);
+        max-height: 84px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 10px auto;
+      }
+
+      .boot-splash-title {
+        margin: 0;
+        color: #102444;
+        font-family: "Space Grotesk", "Segoe UI", sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+      }
+
+      .boot-splash-subtitle {
+        margin: 8px 0 0 0;
+        color: #5f769a;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="boot-splash">
+      <div class="boot-splash-card">
+        <img class="boot-splash-logo" src="%PUBLIC_URL%/app-logo.png" alt="App logo" />
+        <p class="boot-splash-title">Workspace</p>
+        <p class="boot-splash-subtitle">Starting up...</p>
+      </div>
+    </div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

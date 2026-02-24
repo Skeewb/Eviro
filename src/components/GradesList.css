@@ -1,0 +1,262 @@
+.grades-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.grades-list .new-btn {
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, #ffffff 0%, #eef4ff 100%);
+  color: #26354f;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+  transition: all 0.2s ease;
+  margin: 10px;
+}
+
+.grades-actions {
+  display: flex;
+  gap: 8px;
+  margin: 10px;
+}
+
+.grades-actions .new-btn {
+  margin: 0;
+  flex: 1;
+}
+
+.new-subject-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #26354f;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 11px 12px;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.new-subject-input {
+  flex: 1;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 11px 12px;
+  font-size: 13px;
+  background: #fff;
+  color: #26354f;
+}
+
+.new-subject-input:focus {
+  outline: none;
+  border-color: var(--line-strong);
+  box-shadow: 0 0 0 3px rgba(35, 88, 216, 0.12);
+}
+
+.new-subject-btn:hover,
+.grades-list .new-btn:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+}
+
+.grades-list .items {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+.subject-item {
+  margin-bottom: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.subject-item:hover {
+  border-color: var(--line-strong);
+}
+
+.subject-header {
+  padding: 11px;
+  cursor: pointer;
+  background: #f7faff;
+  border: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.subject-header.active {
+  background: #eef4ff;
+  border-left: 3px solid var(--brand);
+  padding-left: 8px;
+}
+
+.subject-header.failing {
+  background: #fff0eb;
+  border-left: 3px solid var(--danger);
+  padding-left: 8px;
+}
+
+.subject-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.subject-name {
+  font-weight: 800;
+  color: #1f2f4a;
+  font-size: 13px;
+  margin-bottom: 2px;
+  word-break: break-word;
+}
+
+.subject-open-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.subject-open-btn:hover {
+  color: var(--brand-strong);
+  text-decoration: underline;
+}
+
+.subject-average {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.toggle-icon {
+  font-size: 11px;
+  color: #6a7ea1;
+  flex: 0 0 auto;
+}
+
+.subject-delete-btn {
+  background: #fff7f4;
+  border: 1px solid #e4c7be;
+  color: var(--danger);
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  flex: 0 0 auto;
+}
+
+.subject-delete-btn:hover {
+  background: #ffefe9;
+}
+
+.exams-list {
+  padding: 8px 10px;
+  background: #f7faff;
+  border-top: 1px solid var(--line);
+}
+
+.exam-item {
+  padding: 8px;
+  margin-bottom: 6px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--line);
+}
+
+.exam-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.exam-name {
+  font-weight: 700;
+  color: #1f2f4a;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.exam-meta {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
+}
+
+.exam-type {
+  font-size: 11px;
+  background: #e9f1ff;
+  color: #2f4f8e;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.exam-weight {
+  font-size: 11px;
+  background: #eaf7ef;
+  color: #246949;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.exam-date {
+  font-size: 11px;
+  color: #607591;
+  font-weight: 600;
+}
+
+.exam-grade {
+  background: linear-gradient(140deg, var(--brand) 0%, var(--brand-strong) 100%);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 12px;
+  margin-left: 8px;
+  flex: 0 0 auto;
+}
+
+.delete-btn {
+  background: #fff7f4;
+  border: 1px solid #e4c7be;
+  color: var(--danger);
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-left: 6px;
+  padding: 5px 7px;
+  border-radius: 8px;
+}
+
+.delete-btn:hover {
+  background: #ffefe9;
+}
+
+.no-exams,
+.no-subjects {
+  padding: 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}

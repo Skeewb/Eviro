@@ -1,0 +1,48 @@
+const defaultTimetable = [
+  { id: 'mon-1-2-d', day: 'Monday', start: '08:15', end: '09:50', title: 'D', location: 'L/B/2', color: '#ecef78', notes: 'LJ' },
+  { id: 'mon-3-4-ma', day: 'Monday', start: '10:05', end: '11:40', title: 'Ma', location: 'L/B/2', color: '#b9b9b9', notes: 'JH' },
+  { id: 'mon-5-spa', day: 'Monday', start: '11:55', end: '12:40', title: 'Spa', location: 'E/1/5', color: '#ff1c10', notes: 'NH' },
+  { id: 'mon-6-winf', day: 'Monday', start: '12:40', end: '13:25', title: 'WInf', location: 'L/B/2', color: '#e4e4e4', notes: 'BBe' },
+  { id: 'mon-8-9-ib-e', day: 'Monday', start: '14:10', end: '15:45', title: 'IB_E', location: 'L/B/1', color: '#1784e7', notes: 'MN' },
+  { id: 'mon-10-ib-m', day: 'Monday', start: '16:00', end: '16:45', title: 'IB_M', location: 'P2', color: '#ff1711', notes: 'JH' },
+
+  { id: 'tue-0-ib-d', day: 'Tuesday', start: '07:30', end: '08:15', title: 'IB_D', location: 'L/B/1', color: '#fff800', notes: 'LJ' },
+  { id: 'tue-1-2-ph', day: 'Tuesday', start: '08:15', end: '09:50', title: 'Ph', location: 'Sci 1', color: '#8c8a00', notes: 'JG' },
+  { id: 'tue-3-fr1', day: 'Tuesday', start: '10:05', end: '10:50', title: 'Fr 1', location: 'L/B/1', color: '#0d84ff', notes: 'NH' },
+  { id: 'tue-3-lat', day: 'Tuesday', start: '10:05', end: '10:50', title: 'Lat', location: 'L/B/2', color: '#f48080', notes: 'DK' },
+  { id: 'tue-4-spa', day: 'Tuesday', start: '10:55', end: '11:40', title: 'Spa', location: 'L/B/1', color: '#ff1a1a', notes: 'NH' },
+  { id: 'tue-4-wr-wwg', day: 'Tuesday', start: '10:55', end: '11:40', title: 'WR (WWG)', location: 'L/B/2', color: '#04a34f', notes: 'AW' },
+  { id: 'tue-5-it', day: 'Tuesday', start: '11:55', end: '12:40', title: 'IT', location: 'E/G/2', color: '#0b8240', notes: 'AG' },
+  { id: 'tue-6-bum-mn', day: 'Tuesday', start: '12:40', end: '13:25', title: 'Bum', location: 'L/B/1', color: '#63c79e', notes: 'MN' },
+  { id: 'tue-6-bum-tka', day: 'Tuesday', start: '12:40', end: '13:25', title: 'Bum', location: 'L/B/2', color: '#0b8240', notes: 'TKa' },
+  { id: 'tue-8-ma', day: 'Tuesday', start: '14:10', end: '14:55', title: 'Ma', location: 'L/B/2', color: '#b6b6b6', notes: 'JH' },
+  { id: 'tue-9-engl', day: 'Tuesday', start: '15:00', end: '15:45', title: 'Engl', location: 'L/B/2', color: '#72d8d8', notes: 'MN' },
+  { id: 'tue-10-ib-bum', day: 'Tuesday', start: '16:00', end: '16:45', title: 'IB_BuM', location: 'P2', color: '#00ff2b', notes: 'MN' },
+
+  { id: 'wed-1-2-tok', day: 'Wednesday', start: '08:15', end: '09:50', title: 'TOK', location: 'L/B/2', color: '#f2f2f2', notes: 'JG' },
+  { id: 'wed-3-4-engl', day: 'Wednesday', start: '10:05', end: '11:40', title: 'Engl', location: 'L/B/2', color: '#72d8d8', notes: 'MN' },
+  { id: 'wed-5-ku', day: 'Wednesday', start: '11:55', end: '12:40', title: 'Ku', location: 'Art', color: '#874141', notes: 'MM' },
+  { id: 'wed-6-mu', day: 'Wednesday', start: '12:40', end: '13:25', title: 'Mu', location: 'Mu', color: '#eb78b7', notes: 'ER' },
+  { id: 'wed-7-intm', day: 'Wednesday', start: '13:25', end: '14:10', title: 'IntM', location: 'L/B/1', color: '#bababa', notes: 'RR' },
+  { id: 'wed-8-sp-mp', day: 'Wednesday', start: '14:10', end: '14:55', title: 'Sp MP', location: 'ESV', color: '#7aeb73', notes: '' },
+  { id: 'wed-9-sp-aro', day: 'Wednesday', start: '15:00', end: '15:45', title: 'Sp ARo', location: '', color: '#7aeb73', notes: '' },
+
+  { id: 'thu-0-ib-phy', day: 'Thursday', start: '07:30', end: '08:15', title: 'IB_Phy', location: 'L/B/1', color: '#ececb4', notes: 'JG' },
+  { id: 'thu-1-2-d', day: 'Thursday', start: '08:15', end: '09:50', title: 'D', location: 'L/B/2', color: '#ecef78', notes: 'LJ' },
+  { id: 'thu-3-ge', day: 'Thursday', start: '10:05', end: '10:50', title: 'Ge', location: 'L/B/2', color: '#ff8600', notes: 'CV' },
+  { id: 'thu-4-ctt', day: 'Thursday', start: '10:55', end: '11:40', title: 'CTT', location: 'L/B/2', color: '#ff00ff', notes: 'JG' },
+  { id: 'thu-5-wr-bbe', day: 'Thursday', start: '11:55', end: '12:40', title: 'WR', location: 'E/G/12', color: '#008a41', notes: 'BBe' },
+  { id: 'thu-6-wr-wwg', day: 'Thursday', start: '12:40', end: '13:25', title: 'WR (WWG)', location: 'L/B/2', color: '#008a41', notes: 'AW' },
+  { id: 'thu-8-p-movie', day: 'Thursday', start: '14:10', end: '14:55', title: 'P_Movie', location: 'L/B/1', color: '#f0ef73', notes: 'RM' },
+  { id: 'thu-8-p-mun-sp', day: 'Thursday', start: '14:10', end: '14:55', title: 'P_MUN', location: 'L/B/2', color: '#f0ef73', notes: 'SP' },
+  { id: 'thu-9-p-mun-mn', day: 'Thursday', start: '15:00', end: '15:45', title: 'P_MUN', location: 'L/B/2', color: '#f0ef73', notes: 'MN' },
+  { id: 'thu-10-11-ib-movie', day: 'Thursday', start: '16:00', end: '17:30', title: 'IB_Movie', location: 'L/B/1', color: '#ececb4', notes: 'RM' },
+
+  { id: 'fri-1-2-pg', day: 'Friday', start: '08:15', end: '09:50', title: 'PG', location: 'L/B/2', color: '#ececb4', notes: 'TKa' },
+  { id: 'fri-3-4-geo', day: 'Friday', start: '10:05', end: '11:40', title: 'Geo', location: 'L/B/2', color: '#498c8c', notes: 'BB' },
+  { id: 'fri-5-fr1', day: 'Friday', start: '11:55', end: '12:40', title: 'Fr 1', location: 'L/B/1', color: '#1784e7', notes: 'NH' },
+  { id: 'fri-6-lat', day: 'Friday', start: '12:40', end: '13:25', title: 'Lat', location: 'L/B/2', color: '#f48080', notes: 'DK' },
+  { id: 'fri-8-9-religion', day: 'Friday', start: '14:10', end: '15:45', title: 'ReiEv / Eth / RelK', location: 'L/B/1-L/B/2', color: '#7676e5', notes: 'LJ / AP / BW' },
+];
+
+export default defaultTimetable;
